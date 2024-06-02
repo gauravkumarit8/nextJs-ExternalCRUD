@@ -7,6 +7,9 @@ const AllPost = async() => {
   console.log("Data",data);
   return (
     <>
+      <div>
+        <Link href={"/create"}>Create Product</Link>
+      </div>
       {
         data.map((post,i)=>(
           <div key={i}>
