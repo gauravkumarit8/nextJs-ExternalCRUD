@@ -4,14 +4,15 @@ import React from 'react'
 
 const AllPost = async() => {
   const data=await getAllPost();
-  // console.log("Data",data);
+  console.log("Data",data);
   return (
     <>
       {
         data.map((post,i)=>(
           <div key={i}>
             <h1>Title : {post.title}</h1>
-            <Link href={`/${post.id}`}>Read more ...</Link>
+            <h2>Price : {[post.price]}</h2> <br/>
+            <Link href={`/${post.id}`}>Read more ...</Link><hr/><hr/>
           </div>
         ))
       }

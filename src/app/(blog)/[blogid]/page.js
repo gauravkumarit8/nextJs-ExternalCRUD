@@ -1,4 +1,5 @@
 import getBlogById from '@/utils/postById/getPostbyUserid'
+import Image from 'next/image';
 
 const BlogById = async ({params}) => {
   // console.log(params)
@@ -8,7 +9,10 @@ const BlogById = async ({params}) => {
     <div >
       <h1>Title : {data.title}</h1>
       <br/>
-      <p>Body : {data.body}</p>
+      <h1>Price : {data.price}</h1>
+      <br/>
+      <p>description : {data.description}</p>
+      <Image src={data.image} width={200} height={300} alt={data.title} />
     </div>
   )
 }
