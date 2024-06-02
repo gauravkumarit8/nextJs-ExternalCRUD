@@ -4,7 +4,7 @@ import React from 'react'
 
 const AllPost = async() => {
   const data=await getAllPost();
-  console.log("Data",data);
+  // console.log("Data",data);
   return (
     <>
       {
